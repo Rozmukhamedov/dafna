@@ -1,0 +1,22 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Location Pin" clip-path="url(#clip0_132_8034)">
+<g id="Clip path group">
+<mask id="mask0_132_8034" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<g id="clip0_437_2347">
+<path id="Vector" d="M24 0H0V24H24V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_132_8034)">
+<g id="Group">
+<path id="Vector_2" d="M12.01 11H12V11.01H12.01V11Z" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="Vector_3" d="M12 22L17.5 16.5C20.5376 13.4624 20.5376 8.53757 17.5 5.5C14.4624 2.46244 9.53754 2.46244 6.49997 5.5C3.46241 8.53757 3.46241 13.4624 6.49997 16.5L12 22Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_132_8034">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
