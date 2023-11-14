@@ -59,6 +59,10 @@ ul {
     isolation: isolate;
 }
 
+.py-50 {
+    padding: 50px 0;
+}
+
 /*         header top            */
 
 .header .header__top {
@@ -168,8 +172,19 @@ ul {
 
 /*         carousel section            */
 
-.caousel-section {
-    margin: 50px 0;
+.caousel-section .carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+
+}
+
+.caousel-section .carousel .carousel-indicators .active {
+    background-color: #00A0E3;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
 }
 
 .caousel-section .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -210,6 +225,237 @@ ul {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption button:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+/*         simple-swiper section            */
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.simple-swiper .swiper-image {
+    overflow: hidden;
+}
+
+.simple-swiper .swiper-image img {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.simple-swiper .swiper-image:hover img {
+    transform: scale(1.1);
+}
+
+.simple-swiper .swiper-text {
+    padding: 26px 20px 0 20px;
+}
+
+.simple-swiper .swiper-text h2 {
+    color: #000;
+    font-family: "Museo Sans Cyrl";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.simple-swiper .swiper-text p {
+    width: 390px;
+    color: #000;
+    font-family: "Museo Sans Cyrl";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*         sale section            */
+
+.sale {
+    position: relative;
+}
+
+.sale h1 {
+    color: #000;
+    font-family: "Museo Sans Cyrl";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.sale .swiper-sale .swiper-card {
+    height: 614px;
+}
+
+.sale .swiper-sale .swiper-card:hover {
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.sale .swiper-sale .swiper-card:hover .swiper-text button {
+    display: inline-block;
+}
+
+.sale .swiper-sale .swiper-card:hover .swiper-image .icon-like {
+    display: flex;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image {
+    position: relative;
+    padding-top: 20px;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image img {
+    width: 340px;
+    height: 354px;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .sale-flag {
+    background: #FF5800;
+    opacity: 0.8;
+    position: absolute;
+    color: #ffffff;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .sale-flag p {
+    margin: 0;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .icon-like {
+    display: none;
+    background: #ffffff;
+    opacity: 0.8;
+    position: absolute;
+    color: #ffffff;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00A0E3;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .icon-like svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .icon-like svg {
+    stroke: #00A0E3;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .icon-like:hover {
+    background: #00A0E3;
+}
+
+.sale .swiper-sale .swiper-card .swiper-image .icon-like:hover svg {
+    stroke: #ffffff;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text {
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text h3 {
+    color: #000;
+    text-align: center;
+    font-family: "Museo Sans Cyrl";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text h4 {
+    color: #FF5800;
+    text-align: center;
+    font-family: "Museo Sans Cyrl";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 15px 0;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text h4 span {
+    color: #9E9E9E;
+    text-align: center;
+    font-family: "Museo Sans Cyrl";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text p {
+    border-radius: 50px;
+    background: #F5F5F5;
+    padding: 2px 10px;
+    color: #000;
+    font-family: "Museo Sans Cyrl";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text p span {
+    color: #00a0e3;
+    font-family: "Museo Sans Cyrl";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text button {
+    border-radius: 50px;
+    border: 1px solid #00a0e3;
+    padding: 12px 46px;
+    margin-top: 33px;
+    display: none;
+    color: #000;
+    text-align: center;
+    font-family: "Museo Sans Cyrl";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sale .swiper-sale .swiper-card .swiper-text button:hover {
+    border: 1px solid #00a0e3;
+    background: #00a0e3;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
