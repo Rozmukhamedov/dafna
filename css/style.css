@@ -59,8 +59,15 @@ ul {
     isolation: isolate;
 }
 
-.py-50 {
+section {
+    position: relative;
     padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 25px 0;
+    }
 }
 
 /*         header top            */
@@ -87,7 +94,6 @@ ul {
 
 .header .header__top ul li a {
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -111,6 +117,12 @@ ul {
     height: 20px;
 }
 
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}
+
 /*         header main            */
 
 .navbar {
@@ -122,7 +134,6 @@ ul {
 
 .navbar .navbar-nav-left .nav-item .nav-link {
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -146,7 +157,6 @@ ul {
 .navbar .tel {
     text-decoration: none;
     color: #00A0E3;
-    font-family: "Museo Sans Cyrl";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -155,7 +165,6 @@ ul {
 
 .navbar .dropdown-language {
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -172,7 +181,7 @@ ul {
 
 /*         carousel section            */
 
-.caousel-section .carousel .carousel-indicators button {
+.carousel .carousel-indicators button {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -180,23 +189,22 @@ ul {
 
 }
 
-.caousel-section .carousel .carousel-indicators .active {
+.carousel .carousel-indicators .active {
     background-color: #00A0E3;
     width: 10px;
     height: 10px;
     opacity: 1;
 }
 
-.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption {
+.carousel .carousel-inner .carousel-item .carousel-caption {
     top: 20%;
     left: 12%;
     max-width: 40%;
     text-align: start;
 }
 
-.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
     color: #FFF;
-    font-family: "Museo Sans Cyrl";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -204,9 +212,8 @@ ul {
     margin-bottom: 20px;
 }
 
-.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption p {
+.carousel .carousel-inner .carousel-item .carousel-caption p {
     color: #FFF;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -214,20 +221,19 @@ ul {
     margin-bottom: 50px;
 }
 
-.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption button {
+.carousel .carousel-inner .carousel-item .carousel-caption button {
     border-radius: 50px;
     background: #FFF;
     padding: 16px 66px 15px 65px;
     color: #000;
     text-align: center;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-.caousel-section .carousel .carousel-inner .carousel-item .carousel-caption button:hover {
+.carousel .carousel-inner .carousel-item .carousel-caption button:hover {
     background-color: #000;
     color: #fff;
     border: 1px solid #000;
@@ -259,7 +265,6 @@ ul {
 
 .simple-swiper .swiper-text h2 {
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -267,59 +272,145 @@ ul {
 }
 
 .simple-swiper .swiper-text p {
-    width: 390px;
+    max-width: 390px;
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-/*         sale section            */
-
-.sale {
-    position: relative;
+@media (max-width: 992px) {
+    .simple-swiper .swiper-text p {
+        display: none;
+    }
 }
 
-.sale h1 {
+@media (max-width: 768px) {
+    .simple-swiper .swiper-image img {
+        height: 300px;
+    }
+
+    .simple-swiper .swiper-text {
+        padding: 15px 15px 0 15px;
+    }
+
+    .simple-swiper .swiper-slide:first-child {
+        width: 80% !important;
+    }
+
+    .swiper-slide:nth-child(2) {
+        width: 80% !important;
+    }
+
+    .simple-swiper .swiper-slide:last-child {
+        width: 80% !important;
+    }
+}
+
+
+/*         sale section            */
+
+.sale-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sale-header h2 {
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 40px;
 }
 
-.sale .swiper-sale .swiper-card {
+.sale-header .swiper-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sale-header .swiper-btns svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-prev {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00A0E3;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-prev:hover {
+    background: #00A0E3;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-prev:hover svg path {
+    stroke: #ffffff;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-next {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00A0E3;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-next:hover {
+    background: #00A0E3;
+}
+
+.sale-header .swiper-btns .swiper-button-sale-next:hover svg path {
+    stroke: #ffffff;
+}
+
+.swiper-sale .swiper-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 614px;
+    padding-bottom: 30px;
 }
 
-.sale .swiper-sale .swiper-card:hover {
+.swiper-sale .swiper-card:hover {
     background: #FFF;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
 }
 
-.sale .swiper-sale .swiper-card:hover .swiper-text button {
-    display: inline-block;
+.swiper-sale .swiper-card:hover button {
+    opacity: 1;
 }
 
-.sale .swiper-sale .swiper-card:hover .swiper-image .icon-like {
+.swiper-sale .swiper-card:hover .swiper-image .icon-like {
     display: flex;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image {
+.swiper-sale .swiper-card .swiper-image {
     position: relative;
-    padding-top: 20px;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image img {
+.swiper-sale .swiper-card .swiper-image img {
     width: 340px;
     height: 354px;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .sale-flag {
+.swiper-sale .swiper-card .swiper-image .sale-flag {
     background: #FF5800;
     opacity: 0.8;
     position: absolute;
@@ -335,11 +426,11 @@ ul {
     align-items: center;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .sale-flag p {
+.swiper-sale .swiper-card .swiper-image .sale-flag p {
     margin: 0;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .icon-like {
+.swiper-sale .swiper-card .swiper-image .icon-like {
     display: none;
     background: #ffffff;
     opacity: 0.8;
@@ -356,42 +447,40 @@ ul {
     border: 1px solid #00A0E3;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .icon-like svg {
+.swiper-sale .swiper-card .swiper-image .icon-like svg {
     width: 24px;
     height: 24px;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .icon-like svg {
+.swiper-sale .swiper-card .swiper-image .icon-like svg {
     stroke: #00A0E3;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .icon-like:hover {
+.swiper-sale .swiper-card .swiper-image .icon-like:hover {
     background: #00A0E3;
 }
 
-.sale .swiper-sale .swiper-card .swiper-image .icon-like:hover svg {
+.swiper-sale .swiper-card .swiper-image .icon-like:hover svg {
     stroke: #ffffff;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text {
+.swiper-sale .swiper-card .swiper-text {
     padding: 20px 20px 30px 20px;
     text-align: center;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text h3 {
+.swiper-sale .swiper-card .swiper-text h3 {
     color: #000;
     text-align: center;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text h4 {
+.swiper-sale .swiper-card .swiper-text h4 {
     color: #FF5800;
     text-align: center;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -399,10 +488,9 @@ ul {
     margin: 15px 0;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text h4 span {
+.swiper-sale .swiper-card .swiper-text h4 span {
     color: #9E9E9E;
     text-align: center;
-    font-family: "Museo Sans Cyrl";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -410,12 +498,20 @@ ul {
     text-decoration-line: line-through;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text p {
+.swiper-sale .swiper-card .swiper-text .default {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.swiper-sale .swiper-card .swiper-text p {
     border-radius: 50px;
     background: #F5F5F5;
     padding: 2px 10px;
     color: #000;
-    font-family: "Museo Sans Cyrl";
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -426,9 +522,8 @@ ul {
     justify-content: center;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text p span {
+.swiper-sale .swiper-card .swiper-text p span {
     color: #00a0e3;
-    font-family: "Museo Sans Cyrl";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -437,29 +532,382 @@ ul {
     margin-top: 1px;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text button {
+.swiper-sale .swiper-card button {
     border-radius: 50px;
     border: 1px solid #00a0e3;
     padding: 12px 46px;
-    margin-top: 33px;
-    display: none;
+    opacity: 0;
     color: #000;
     text-align: center;
-    font-family: "Museo Sans Cyrl";
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-.sale .swiper-sale .swiper-card .swiper-text button:hover {
+.swiper-sale .swiper-card button:hover {
     border: 1px solid #00a0e3;
     background: #00a0e3;
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .header {
-        display: none;
+@media (max-width: 992px) {
+    .sale .swiper-sale .swiper-card {
+        height: 444px;
+
     }
+
+    .sale .swiper-sale .swiper-card .swiper-image img {
+        width: 200px;
+        height: 208px;
+    }
+
+    .sale .swiper-sale .swiper-card .swiper-text h3 {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .sale .swiper-sale .swiper-card .swiper-image .sale-flag {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .sale .swiper-sale .swiper-card .swiper-image .sale-flag p {
+        color: #FFF;
+        text-align: center;
+
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .sale .swiper-sale .swiper-card .swiper-image .icon-like {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .sale .swiper-sale .swiper-card .swiper-image .icon-like svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* // collection section  //*/
+
+.collection-title {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.collection-nav {
+    margin: 40px 0;
+}
+
+.collection-nav .nav-item:first-child .nav-link {
+    padding-left: 0;
+}
+
+.collection-nav .nav-item .nav-link.active {
+    color: #00A0E3;
+    text-decoration: underline;
+}
+
+.collection-nav .nav-item .nav-link {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.collection-tab {
+    min-height: 600px;
+}
+
+.collection-tab .collection-main {
+    background: url("../images/collection/image1.png") no-repeat;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 100px;
+}
+
+.collection-tab .collection-main h3 {
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.collection-tab .collection-main button {
+    background: #ffffff;
+    padding: 16px 66px 16px 65px;
+    border-radius: 50px;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.collection-tab .collection-main button:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.collection-tab .collection-product {
+    padding: 50px;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.collection-tab .collection-product img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.collection-tab .collection-product h5 {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.collection-tab .collection-product p {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 34px;
+}
+
+.collection-tab .collection-product .btns button {
+    border-radius: 50px;
+    border: 1px solid #00A0E3;
+    padding: 12px 46px;
+}
+
+.collection-tab .collection-product .btns button:hover {
+    background: #00A0E3;
+    color: #fff;
+}
+
+.collection-tab .collection-product .btns .btn-heart {
+    padding: 8px;
+    margin-left: 8px;
+}
+
+.collection-tab .collection-product .btns .btn-heart:hover svg path {
+    stroke: #FFF;
+}
+
+/* //// catalog //// */
+
+.catalog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-header h2 {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.catalog-header .catalog-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.catalog-header .catalog-link svg {
+    margin-left: 10px;
+}
+
+.catalog-grid {
+    margin-top: 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "A A B B   C C C C"
+        "A A D D   E E F F"
+}
+
+.catalog-grid .box-1 {
+    grid-area: A;
+}
+
+.catalog-grid .box-2 {
+    grid-area: B;
+}
+
+.catalog-grid .box-3 {
+    grid-area: C;
+}
+
+.catalog-grid .box-4 {
+    grid-area: D;
+}
+
+.catalog-grid .box-5 {
+    grid-area: E;
+}
+
+.catalog-grid .box-6 {
+    grid-area: F;
+}
+
+.catalog-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog-grid .box {
+    overflow: hidden;
+}
+
+.catalog-grid .box img {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.catalog-grid .box:hover img {
+    transform: scale(1.1);
+}
+
+
+/* /// footer /// */
+
+footer {
+    background: #FFF;
+    margin-top: 50px;
+}
+
+footer .footer-top {
+    padding: 70px 0;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+footer .footer-top .footer-logo {
+    width: 220px;
+    height: 44px;
+}
+
+footer .footer-top .footer-number {
+    margin: 50px 0;
+}
+
+footer .footer-top .footer-number a {
+    text-decoration: none;
+    color: #00A0E3;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+footer .footer-top .footer-app {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .footer-top .footer-app img:first-child {
+    margin-right: 20px;
+}
+
+footer .footer-top .footer-lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .footer-top .footer-lists .footer-list h4 {
+    color: #00A0E3;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+footer .footer-top .footer-lists .footer-list ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
+footer .footer-top .footer-lists .footer-list ul li a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+footer .footer-bottom {
+    padding: 25px 0;
+}
+
+footer .footer-bottom h5 {
+    margin-bottom: 0;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .footer-icons {
+    display: flex;
+}
+
+footer .footer-icons svg {
+    margin: 0 15px;
+}
+
+footer .footer-partners {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+footer .footer-partners img {
+    margin-left: 30px;
+}
+
+footer .footer-partners img:first-child {
+    margin: 0;
 }
